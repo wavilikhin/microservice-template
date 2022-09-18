@@ -11,3 +11,13 @@ services:
             - '3000:3000'
         volumes:
             - .env:/opt/app/api/
+    postgres:
+      image: 'postgres:14.5-alpine'
+      ports:
+        - 5432:5432
+      volumes:
+        - ./prisma/:/opt/app/prisma/
+      environment:
+        - POSTGRES_USER=${POSTGRES_USER}
+        - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+        - POSTGRES_DB=${POSTGRES_DB}
