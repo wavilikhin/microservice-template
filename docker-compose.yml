@@ -6,7 +6,6 @@ services:
         # For testing build from gh packages
         # image: docker.pkg.github.com/wavilikhin/nest-api/nest-api:develop
         container_name: nest-js-api
-        restart: always
         ports:
             - '3000:3000'
         volumes:
