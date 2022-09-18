@@ -1,5 +1,7 @@
 # Docker, Prisma
 
+https://github.com/notiz-dev/nestjs-prisma-starter
+
 [] - Check that it runs from scratch
 [] - Add and test docker-compose.migrate.yml
 [] - Add and test docker-compose.db.yml
