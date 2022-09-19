@@ -2,7 +2,7 @@
 
 ## Description
 
-This is a microservice boilerplate repo
+This is a microservice boilerplate repo \
 It has a default setup for UI, Backend, DB and Message broker
 
 ### Technologies used
