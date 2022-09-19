@@ -4,7 +4,7 @@ RUN uname -a
 RUN echo $DATABASE_URL
 
 # Create app directory
-WORKDIR $DOCKER_WORK_DIR
+WORKDIR /opt/app
 
 # Install prisma for the migration
 RUN npm install -g prisma --unsafe-perm
@@ -13,4 +13,4 @@ RUN npm install -g prisma --unsafe-perm
 ADD ./ ./prisma/
 
 CMD ["prisma", "db", "pull"]
-CMD ["prisma", "migrate", "dev", "--name", "initial-migration", "--create-only"]
+CMD ["prisma", "migrate", "dev", "--name", "initial-migration"]
