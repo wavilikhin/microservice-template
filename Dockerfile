@@ -1,5 +1,5 @@
 FROM node:18.9.0 as deps
-WORKDIR /opt/app
+WORKDIR $DOCKER_WORK_DIR
 COPY package*.json yarn.lock /opt/app/
 COPY prisma ./prisma/
 RUN yarn
@@ -8,7 +8,6 @@ COPY . .
 
 FROM deps as builder
 RUN yarn build
-RUN yarn prisma generate
 
 FROM builder as runner
 EXPOSE 3000
