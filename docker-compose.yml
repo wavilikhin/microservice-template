@@ -1,19 +1,19 @@
 version: '3.8'
 services:
-    nest_api:
+    nestjs_server:
         # For local build testing
-        build: ./
+        build: ./server
         # For testing build from gh packages
         # image: docker.pkg.github.com/wavilikhin/nest-api/nest-api:develop
-        container_name: nest-js-api
+        container_name: nestjs_server
         ports:
             - '3000:3000'
         volumes:
-            - .env:/opt/app/api/
+            - ./server/.env:/opt/app/api/server
         depends_on:
             - postgres
         env_file:
-            - .env
+            - server/.env
 
     postgres:
       image: 'postgres:14.5-alpine'
@@ -22,7 +22,7 @@ services:
       ports:
         - 5432:5432
       env_file:
-      - .env
+      - server/.env
       volumes:
         - postgres:/var/lib/postgresql/data
 
