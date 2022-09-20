@@ -7,10 +7,10 @@ It has a default setup for UI, Backend, DB and Message broker
 
 ### Technologies used
 
-[Nest](https://github.com/nestjs/nest) - Node.js TypeScript friendly repository. \
-[Prisma](https://www.prisma.io/) - awesome ORM. \
-[Next.js](https://nextjs.org) - React framework. \
-[Kafka](https://kafka.apache.org) - Event streaming platform.
+**Backend:** [Nest.js](https://github.com/nestjs/nest) \
+**DB:** [PostgreSQL](https://www.postgresql.org) + [Prisma](https://www.prisma.io/) \
+**Frontend:** [Next.js](https://nextjs.org) \
+**Message broker:** [Kafka](https://kafka.apache.org)
 
 ## Installation
 
