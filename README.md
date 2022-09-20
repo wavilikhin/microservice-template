@@ -17,7 +17,7 @@ It has a default setup for UI, Backend, DB and Message broker
 ```bash
 $ yarn install
 ```
-
+<!-- 
 ## Running the app
 
 ```bash
@@ -27,7 +27,7 @@ $ yarn start
 $ yarn start:dev
 # production mode
 $ yarn start:prod
-```
+``` -->
 
 ## Running the app (Docker)
 
@@ -55,7 +55,7 @@ $ yarn seed
 
 > **Note:** If you are running postgress in Docker container - set the `DB_HOST` env to `local`
 
-## Test
+<!-- ## Test
 
 ```bash
 # unit tests
@@ -64,7 +64,7 @@ $ yarn test
 $ yarn test:e2e
 # test coverage
 $ yarn test:cov
-```
+``` -->
 
 ## License
 
