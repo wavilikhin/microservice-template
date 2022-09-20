@@ -1,15 +1,15 @@
 FROM node:18.9.0 as deps
+# RUN apk add --no-cache libc6-compat
 WORKDIR /opt/app
 COPY package*.json yarn.lock /opt/app/
 COPY prisma ./prisma/
 RUN yarn
-# RUN apt-get -qy update && apt-get -qy install openssl
 COPY . .
 
 FROM deps as builder
 RUN yarn build
 
 FROM builder as runner
-EXPOSE 3000
+EXPOSE ${PORT}
 ENV NODE_ENV production
 CMD ["node", "./dist/src/main.js"]
