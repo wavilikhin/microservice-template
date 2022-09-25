@@ -6,8 +6,9 @@
 [x] - Add UI repo as separate container
 [x] - Add dotenvsafe for front
 [x] - Add UI lib for forntend
-[] - Test CDUR
-[] - Create separate modules and controllers for users and posts
+[x] - Test CDUR
+[x] - Create separate modules and controllers for users and posts
+[] - Set up proxy for API on UI side (for CORS) 
 [] - Add kafka repo
 [] - Integrate kafka
 [] - Add dev version of container for UI
@@ -18,3 +19,4 @@
 [] - Add sonarQube config
 [] - Add precommit hooks
 [] - Add alpine images for prod
+[] - Add auth logic (?)
