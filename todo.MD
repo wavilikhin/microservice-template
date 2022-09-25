@@ -5,6 +5,7 @@
 [x] - Add and test docker-compose.db.yml
 [x] - Add UI repo as separate container
 [x] - Add dotenvsafe for front
+[x] - Add UI lib for forntend
 [] - Test CDUR
 [] - Create separate modules and controllers for users and posts
 [] - Add kafka repo
