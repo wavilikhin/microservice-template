@@ -1,12 +1,12 @@
 import { Injectable } from '@nestjs/common';
-import { PrismaService } from './prisma.service';
 import { Post, Prisma } from '@prisma/client';
+import { PrismaService } from 'src/prisma.service';
 
 @Injectable()
-export class PostService {
+export class PostsService {
   constructor(private prisma: PrismaService) {}
 
-  async post(
+  async getPost(
     postWhereUniqueInput: Prisma.PostWhereUniqueInput,
   ): Promise<Post | null> {
     return this.prisma.post.findUnique({
@@ -14,7 +14,7 @@ export class PostService {
     });
   }
 
-  async posts(params: {
+  async getPosts(params: {
     skip?: number;
     take?: number;
     cursor?: Prisma.PostWhereUniqueInput;
@@ -37,11 +37,10 @@ export class PostService {
     });
   }
 
-  async updatePost(params: {
-    where: Prisma.PostWhereUniqueInput;
-    data: Prisma.PostUpdateInput;
-  }): Promise<Post> {
-    const { data, where } = params;
+  async updatePost(
+    where: Prisma.PostWhereUniqueInput,
+    data: Prisma.PostUpdateInput,
+  ): Promise<Post> {
     return this.prisma.post.update({
       data,
       where,
