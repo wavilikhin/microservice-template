@@ -1,3 +1,9 @@
+# turbo
+.turbo
+build/**
+dist/**
+.next/**
+
 # compiled output
 server/dist
 server/node_modules
@@ -42,3 +48,4 @@ lerna-debug.log*
 # Prisma
 server/prisma/*.db
 server/prisma/migrations/dev/
+node_modules
