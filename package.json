@@ -1,4 +1,7 @@
 {
+  "name": "mst",
+  "version": "0.0.0",
+  "private": true,
   "devDependencies": {
     "turbo": "^1.5.3"
   },

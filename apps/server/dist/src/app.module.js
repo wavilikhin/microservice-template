@@ -9,13 +9,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.AppModule = void 0;
 const common_1 = require("@nestjs/common");
 const config_1 = require("@nestjs/config");
-const posts_service_1 = require("./posts/posts.service");
+const app_controller_1 = require("./app.controller");
+const app_service_1 = require("./app.service");
+const post_service_1 = require("./post.service");
 const prisma_service_1 = require("./prisma.service");
-const users_service_1 = require("./users/users.service");
-const users_module_1 = require("./users/users.module");
-const posts_module_1 = require("./posts/posts.module");
-const users_controller_1 = require("./users/users.controller");
-const posts_controller_1 = require("./posts/posts.controller");
+const user_service_1 = require("./user.service");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
@@ -24,11 +22,9 @@ AppModule = __decorate([
             config_1.ConfigModule.forRoot({
                 envFilePath: ['.env', '.env.development'],
             }),
-            users_module_1.UsersModule,
-            posts_module_1.PostsModule,
         ],
-        controllers: [users_controller_1.UsersController, posts_controller_1.PostsController],
-        providers: [prisma_service_1.PrismaService, users_service_1.UsersService, posts_service_1.PostsService],
+        controllers: [app_controller_1.AppController],
+        providers: [app_service_1.AppService, prisma_service_1.PrismaService, user_service_1.UserService, post_service_1.PostService],
     })
 ], AppModule);
 exports.AppModule = AppModule;
