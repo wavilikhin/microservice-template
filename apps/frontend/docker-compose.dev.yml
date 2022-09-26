@@ -1,0 +1,28 @@
+version: '3.9'
+services:
+  frontend:
+    build:
+      context: ./
+      dockerfile: Dockerfile.dev
+    container_name: frontend_dev
+    ports:
+      - '3000:3000'
+    volumes:
+      - type: bind
+        source: ./.next
+        target: /opt/app/frontend/.next
+      - type: bind
+        source: ./common
+        target: /opt/app/frontend/common
+      - type: bind
+        source: ./hooks
+        target: /opt/app/frontend/hooks
+      - type: bind
+        source: ./pages
+        target: /opt/app/frontend/pages
+      - type: bind
+        source: ./public
+        target: /opt/app/frontend/public
+      - type: bind
+        source: ./styles
+        target: /opt/app/frontend/styles
