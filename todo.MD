@@ -25,3 +25,4 @@
 [] - Add precommit hooks
 [] - Add alpine images for prod
 [] - Take a look at this for migration - https://turborepo.org/docs/handbook/dev#running-tasks-before-dev
+[] - Add server prod Docker version
