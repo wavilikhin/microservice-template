@@ -8,7 +8,7 @@ env.config({ path: './../.env' });
 async function bootstrap() {
     const app = await core_1.NestFactory.create(app_module_1.AppModule);
     await app.listen(process.env.PORT);
-    common_1.Logger.log(`Listening on port :${process.env.PORT}`, 'NestApplication');
+    common_1.Logger.log(`Listening on port : ${process.env.PORT}`, 'NestApplication');
 }
 bootstrap();
 //# sourceMappingURL=main.js.map

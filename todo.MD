@@ -5,14 +5,17 @@
 [x] - Add and test docker-compose.db.yml
 [x] - Add UI repo as separate container
 [x] - Add dotenvsafe for front
-[] - Add dev version of container for UI
-[] - Add dev version of container for server
-[] - Run turborepo with docker - https://turborepo.org/docs/handbook/deploying-with-docker
-    [] - docker-compose.db and docker-compose.migrate starts as separate pipelines in docker
-    [] - frontend and server starts in dev mode in docker
-
+[x] - Add dev version of container for UI
+[x] - Fix UI proxy
 [x] - Test CDUR
 [x] - Create separate modules and controllers for users and posts
+[] - Run turborepo with docker - https://turborepo.org/docs/handbook/deploying-with-docker
+    [] - docker-compose.db and docker-compose.migrate starts as separate pipelines in docker
+    [] - db migrates
+    [] - db up
+    [] - frontend and server starts in dev mode in docker
+[] - Fix prettier and eslint for apps/
+[] - Add dev version of container for server
 [] - Add kafka repo
 [] - Integrate kafka
 [] - Update 'running the app' part in README
