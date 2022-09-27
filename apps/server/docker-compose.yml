@@ -1,0 +1,14 @@
+version: '3.9'
+services:
+    server:
+        # For local build testing
+        build:
+          context: ./
+          dockerfile: Dockerfile
+        # For testing build from gh packages
+        # image: docker.pkg.github.com/wavilikhin/nest-api/nest-api:develop
+        container_name: server
+        ports:
+            - '3001:3001'
+        env_file:
+            - ./.env
