@@ -1,0 +1,75 @@
+version: '3.9'
+services:
+    server:
+      build:
+        context: apps/server
+        dockerfile: Dockerfile.dev
+      container_name: server_dev
+      ports:
+          - '3001:3001'
+      env_file:
+          - apps/server/.env
+      volumes:
+      - type: bind
+        source: apps/server/src
+        target: /opt/app/apps/server/src
+      depends_on:
+        - postgres
+        - prisma-migrate
+
+    frontend:
+      build:
+        context: apps/frontend
+        dockerfile: Dockerfile.dev
+      container_name: frontend_dev
+      ports:
+        - '3000:3000'
+      env_file:
+          - apps/frontend/.env
+      volumes:
+        - type: bind
+          source: apps/frontend/.next
+          target: /opt/app/apps/frontend/.next
+        - type: bind
+          source: apps/frontend/common
+          target: /opt/app/apps/frontend/common
+        - type: bind
+          source: apps/frontend/hooks
+          target: /opt/app/apps/frontend/hooks
+        - type: bind
+          source: apps/frontend/pages
+          target: /opt/app/apps/frontend/pages
+        - type: bind
+          source: apps/frontend/public
+          target: /opt/app/apps/frontend/public
+        - type: bind
+          source: apps/frontend/styles
+          target: /opt/app/apps/frontend/styles
+      depends_on:
+        - server
+        - postgres
+        - prisma-migrate
+
+    postgres:
+      image: 'postgres:14.5-alpine'
+      container_name: postgres
+      restart: always
+      ports:
+        - 5432:5432
+      env_file:
+      - apps/server/.env
+      volumes:
+        - postgres:/var/lib/postgresql/data
+
+    prisma-migrate:
+      container_name: prisma-migrate
+      build:
+        context: apps/server/prisma
+        dockerfile: Dockerfile
+      env_file:
+        - apps/server/.env
+      depends_on:
+        - postgres
+volumes:
+  postgres:
+    name: nest-db

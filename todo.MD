@@ -9,6 +9,7 @@
 [x] - Fix UI proxy
 [x] - Test CDUR
 [x] - Create separate modules and controllers for users and posts
+[] - Descide how to run it in one command  
 [] - Run turborepo with docker - https://turborepo.org/docs/handbook/deploying-with-docker
     [] - docker-compose.db and docker-compose.migrate starts as separate pipelines in docker
     [] - db migrates

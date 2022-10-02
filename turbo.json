@@ -1,7 +1,17 @@
 {
   "$schema": "https://turborepo.org/schema.json",
   "pipeline": {
+    "docker:dev": {
+      "dependsOn": ["docker:db", "migrate:dev"],
+      "cache": false
+    },
     "dev": {
+      "cache": false
+    },
+    "docker:db" : {
+      "cache": false
+    },
+    "migrate:dev" : {
       "cache": false
     },
     "build": {
