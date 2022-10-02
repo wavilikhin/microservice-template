@@ -1,9 +1,11 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get } from '@nestjs/common'
 
 @Controller('users')
 export class UsersController {
   @Get()
   async getUsers() {
-    return JSON.stringify({ users: [1] });
+    return JSON.stringify({
+      users: [1],
+    })
   }
 }

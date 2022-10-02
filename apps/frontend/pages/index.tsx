@@ -41,12 +41,18 @@ const Home: NextPage = () => {
           )}
         </Col>
 
-        <Col span={6} style={{ padding: '60px' }}>
-          <Card style={{ width: 300 }}>
+        <Col span={6} style={{
+ padding: '60px' 
+}}>
+          <Card style={{
+ width: 300 
+}}>
             <Space direction='vertical' size='large'>
               <>
                 <Space direction='vertical' size='middle'>
-                  <Title level={3} className='geekblue-2' style={{ color: grey[6] }}>Create new post</Title>
+                  <Title level={3} className='geekblue-2' style={{
+ color: grey[6] 
+}}>Create new post</Title>
                   <Input placeholder='Title' />
                   <TextArea rows={4} placeholder='Content' />
                 </Space>

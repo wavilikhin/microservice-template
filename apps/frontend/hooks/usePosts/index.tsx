@@ -9,7 +9,6 @@ interface Post {
   "authorId": number
 }
 
-
 export const usePosts = () => {
   return useQuery('posts', () => fetch('/api/posts').then(res => res.json()).then((res: Post[]) => res))
 }

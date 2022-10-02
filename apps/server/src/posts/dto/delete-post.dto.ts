@@ -1,3 +1,3 @@
 export class DeletePostDto {
-  id?: number;
+  id?: number
 }

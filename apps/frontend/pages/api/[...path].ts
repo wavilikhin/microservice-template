@@ -5,7 +5,9 @@ const { API_URL } = process.env
 const proxyOptions = {
   target: API_URL,
   secure: false,
-  pathRewrite: { "^/api": "" },
+  pathRewrite: {
+ "^/api": "" 
+},
 }
 
 const proxy = createProxyMiddleware(proxyOptions);
