@@ -5,8 +5,8 @@ dist/**
 .next/**
 
 # compiled output
-server/dist
-server/node_modules
+apps/server/dist
+apps/server/node_modules
 
 # Logs
 logs
@@ -41,11 +41,11 @@ lerna-debug.log*
 !.vscode/extensions.json
 
 # envs
-.env.production
-.env.development
-.env
+apps/**/.env.production
+apps/**/.env.development
+apps/**/.env
 
 # Prisma
-server/prisma/*.db
-server/prisma/migrations/dev/
+apps/server/prisma/*.db
+apps/server/prisma/migrations/dev/
 node_modules

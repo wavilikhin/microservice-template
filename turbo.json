@@ -20,15 +20,17 @@
     },
     "test": {
       "dependsOn": ["build"],
-      "outputs": [],
       "inputs": ["src/**/*.spec.ts", "src/**/*.e2e-spec.ts", "src/**/*.spec.tsx"]
     },
     "lint": {
-      "outputs": []
+      "cache": false,
+      "dependsOn": ["lint:ts"]
+    },
+    "lint:ts": {
+      "cache": false
     },
     "deploy": {
-      "dependsOn": ["build", "test", "lint"],
-      "outputs": []
+      "dependsOn": ["build", "test", "lint"]
     }
   }
 }
