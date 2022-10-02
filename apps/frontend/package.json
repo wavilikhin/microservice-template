@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "lint:ts": "tsc --noEmit",
     "checkEnvs": "ts-node dotenv.ts",
     "docker:dev" : "docker-compose -f docker-compose.dev.yml up"
   },
@@ -20,7 +21,8 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-query": "^3.39.2",
-    "ts-node": "^10.9.1"
+    "ts-node": "^10.9.1",
+    "tsconfig": "*"
   },
   "devDependencies": {
     "@types/dotenv-safe": "^8.1.2",

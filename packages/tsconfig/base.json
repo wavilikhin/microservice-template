@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Default",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "target": "es2017",
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "incremental": true,
+    "removeComments": true,
+    "sourceMap": true,
+    "moduleResolution": "node"
+  },
+  "exclude": ["node_modules"]
+}

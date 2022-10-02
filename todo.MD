@@ -9,13 +9,16 @@
 [x] - Fix UI proxy
 [x] - Test CDUR
 [x] - Create separate modules and controllers for users and posts
-[] - Descide how to run it in one command  
-[] - Run turborepo with docker - https://turborepo.org/docs/handbook/deploying-with-docker
-    [] - docker-compose.db and docker-compose.migrate starts as separate pipelines in docker
-    [] - db migrates
-    [] - db up
-    [] - frontend and server starts in dev mode in docker
+[x] - Descide how to run it in one command  
+[x] - Run turborepo with docker - https://turborepo.org/docs/handbook/deploying-with-docker
+    [x] - docker-compose.db and docker-compose.migrate starts as separate pipelines in docker
+    [x] - db migrates
+    [x] - db up
+    [x] - frontend and server starts in dev mode in docker
 [] - Fix prettier and eslint for apps/
+  [] - create base tsconfig from front and server
+  [] - create base prettier
+  [] - add eslint prettier plugin
 [] - Add dev version of container for server
 [] - Add kafka repo
 [] - Integrate kafka
